@@ -1,0 +1,8 @@
+# Build files
+build
+
+# Binary files
+bin
+
+# VS Code project files
+.vscode
