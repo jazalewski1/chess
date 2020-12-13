@@ -20,4 +20,5 @@ enable_testing()
 
 add_executable(Chess app/Main.cpp)
 
+add_subdirectory(${PROJECT_SOURCE_DIR}/lib/util)
 add_subdirectory(${PROJECT_SOURCE_DIR}/test)
