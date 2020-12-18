@@ -1,5 +1,6 @@
 set(
 	HEADERS
+	include/logic/Board.hpp
 	include/logic/Piece.hpp
 )
 
