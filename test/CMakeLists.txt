@@ -10,5 +10,6 @@ target_link_libraries(
 	gtest
 	gtest_main
 	gmock
+	Logic
 )
 add_test(NAME DummyTests COMMAND DummyTests)
