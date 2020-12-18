@@ -1,15 +1,16 @@
 set(EXECUTABLE_OUTPUT_PATH ${TEST_EXECUTABLE_OUTPUT_PATH})
 
-add_executable(
-	DummyTests
-	src/DummyTests.cpp
-)
+include(${PROJECT_SOURCE_DIR}/cmake/AddTestModule.cmake)
 
-target_link_libraries(
-	DummyTests
+add_test_module(
+	MODULE_NAME DummyTests
+	MODULE_PATH src/DummyTests.cpp
+	DEPENDENCIES
 	gtest
 	gtest_main
 	gmock
 	Logic
+	Util
 )
-add_test(NAME DummyTests COMMAND DummyTests)
+
+# wait for other tests here
