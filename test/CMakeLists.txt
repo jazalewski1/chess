@@ -1,15 +1,15 @@
 set(EXECUTABLE_OUTPUT_PATH ${TEST_EXECUTABLE_OUTPUT_PATH})
 
 add_executable(
-	DummyTests
-	src/DummyTests.cpp
+	UnitTests
+	src/FieldTest.cpp
 )
 
 target_link_libraries(
-	DummyTests
+	UnitTests
+	Logic
 	gtest
 	gtest_main
 	gmock
-	Logic
 )
-add_test(NAME DummyTests COMMAND DummyTests)
+add_test(NAME UnitTests COMMAND UnitTests)
