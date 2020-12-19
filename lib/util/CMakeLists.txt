@@ -1,6 +1,7 @@
 set(
 	HEADERS
 	include/util/Vector2.hpp
+	include/util/Exception.hpp
 )
 
 set(
