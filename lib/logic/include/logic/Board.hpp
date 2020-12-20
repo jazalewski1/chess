@@ -14,8 +14,8 @@ public:
 	{
 	}
 
-	virtual Piece& get_figure_at(util::Vector2i) const = 0;
+	virtual Piece& get_piece_at(util::Vector2i) const = 0;
 
-	virtual void move_figure(util::Vector2i, util::Vector2i) = 0;
+	virtual void move_piece(util::Vector2i, util::Vector2i) = 0;
 };
 } // namespace logic
