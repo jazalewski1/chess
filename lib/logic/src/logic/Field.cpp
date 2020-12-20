@@ -1,22 +1,17 @@
 #include "logic/Field.hpp"
 
-Field::Field() : state(FieldState::Free)
+namespace logic
+{
+Field::Field()
 {}
 
-FieldState Field::getState() const
+std::shared_ptr<Piece> Field::getPiece() const
 {
-	return state;
+	return piece;
 }
 
-bool Field::setState(FieldState new_state)
+void Field::setPiece(std::shared_ptr<Piece> new_piece)
 {
-	state=new_state;
-	if(state==new_state)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	piece=new_piece;
 }
+} // namespace logic

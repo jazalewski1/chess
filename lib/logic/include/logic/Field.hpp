@@ -1,18 +1,18 @@
 #pragma once
+#include "Piece.hpp"
+#include <memory>
 
-enum class FieldState
+namespace logic
 {
-	Free,
-	King,
-	Queen
-};
-
 class Field 
 {
 public:
 	Field();
-	FieldState getState() const;
-	bool setState(FieldState new_state);
+	std::shared_ptr<Piece> getPiece() const;
+	void setPiece(std::shared_ptr<Piece> new_piece);
 private:
-	FieldState state;
+	std::shared_ptr<Piece> piece;
+	int x_pos;
+	int y_pos;
 };
+} // namespace logic
