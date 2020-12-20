@@ -1,15 +1,15 @@
 set(EXECUTABLE_OUTPUT_PATH ${TEST_EXECUTABLE_OUTPUT_PATH})
 
 add_executable(
-	UnitTests
+	FieldTest
 	src/FieldTest.cpp
 )
 
 target_link_libraries(
-	UnitTests
+	FieldTest
 	Logic
 	gtest
 	gtest_main
 	gmock
 )
-add_test(NAME UnitTests COMMAND UnitTests)
+add_test(NAME FieldTest COMMAND FieldTest)

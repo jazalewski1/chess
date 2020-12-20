@@ -3,10 +3,20 @@
 Field::Field() : state(FieldState::Free)
 {}
 
-Field::~Field()
-{}
-
 FieldState Field::getState() const
 {
 	return state;
+}
+
+bool Field::setState(FieldState new_state)
+{
+	state=new_state;
+	if(state==new_state)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

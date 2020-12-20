@@ -11,8 +11,8 @@ class Field
 {
 public:
 	Field();
-	~Field();
 	FieldState getState() const;
+	bool setState(FieldState new_state);
 private:
 	FieldState state;
 };
