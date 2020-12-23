@@ -5,13 +5,28 @@ namespace logic
 Field::Field()
 {}
 
-std::shared_ptr<Piece> Field::getPiece() const
+Field::Field(const int x, const int y)
 {
-	return piece;
+    m_position = {x,y};
 }
 
-void Field::setPiece(std::shared_ptr<Piece> new_piece)
+Field::Field(const util::Vector2i position)
 {
-	piece=new_piece;
+    m_position = position;
+}
+
+std::shared_ptr<Piece> Field::get_piece() const
+{
+    return piece;
+}
+
+void Field::set_piece(std::shared_ptr<Piece> new_piece)
+{
+    piece=new_piece;
+}
+
+util::Vector2i Field::get_position()
+{
+    return m_position;
 }
 } // namespace logic
