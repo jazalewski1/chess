@@ -1,11 +1,13 @@
 set(
 	HEADERS
 	include/logic/Board.hpp
+	include/logic/ChessBoard.hpp
 	include/logic/Piece.hpp
 )
 
 set(
 	SOURCES
+	src/ChessBoard.cpp
 )
 
 add_library(
