@@ -6,12 +6,6 @@
 
 namespace logic
 {
-struct Field
-{
-	const util::Vector2i position;
-	State state;
-};
-
 class ChessBoard : public Board
 {
 public:
@@ -22,18 +16,13 @@ public:
 	void move_piece(util::Vector2i, util::Vector2i) override;
 
 private:
-	using Fields = std::vector<Field>;
-	using FieldsConstIter = Fields::const_iterator;
-	using FieldsIter = Fields::iterator;
+	using States = std::vector<State>;
 
-	Fields fields;
+	const util::Vector2i size;
+	States states;
 
-	FieldsConstIter find_field(util::Vector2i) const;
+	inline auto linear_index(util::Vector2i position) const -> States::size_type;
 
-	FieldsConstIter try_find_field(util::Vector2i) const;
-
-	FieldsIter find_field(util::Vector2i);
-
-	FieldsIter try_find_field(util::Vector2i);
+	inline void throw_if_out_of_bounds(util::Vector2i position) const;
 };
 } // namespace logic
