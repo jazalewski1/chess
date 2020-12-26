@@ -1,11 +1,10 @@
 #pragma once
 
 #include "util/Vector2.hpp"
-#include <memory>
 
 namespace logic
 {
-struct Piece;
+enum class State {EMPTY, PAWN, KING, KNIGHT, BISHOP, ROOK, QUEEN};
 
 class Board
 {
@@ -14,7 +13,7 @@ public:
 	{
 	}
 
-	virtual Piece& get_piece_at(util::Vector2i) const = 0;
+	virtual State get_piece_at(util::Vector2i) const = 0;
 
 	virtual void move_piece(util::Vector2i, util::Vector2i) = 0;
 };

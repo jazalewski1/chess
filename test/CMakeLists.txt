@@ -9,3 +9,13 @@ add_test_module(
 	gtest
 	gtest_main
 )
+
+add_test_module(
+	MODULE_NAME BoardTests
+	MODULE_PATH src/BoardTests.cpp
+	DEPENDENCIES
+	gtest
+	gtest_main
+	Logic
+	Util
+)
